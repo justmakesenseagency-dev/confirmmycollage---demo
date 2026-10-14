@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #17172b;
+  --color-muted: #77788b;
+  --color-purple: #7456ff;
+  --color-purple-dark: #6046e8;
+  --color-purple-soft: #eeebff;
+  --color-lime: #d9ff64;
+  --color-pink: #ff8dc7;
+  --color-paper: #f8f7ff;
+  --color-line: #e9e7f4;
+  --color-white: #ffffff;
+  --color-success: #1fa971;
+  --color-warning: #f5a623;
+  --color-danger: #e5484d;
+
+  --font-heading: "Space Grotesk", sans-serif;
+  --font-body: "DM Sans", sans-serif;
+}
+
+:root {
+  color-scheme: light;
+}
+
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: #f8f7ff;
+  color: #17172b;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+.hero-highlight {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.hero-highlight::before {
+  content: "";
+  position: absolute;
+  bottom: 4px;
+  left: -4px;
+  right: -4px;
+  height: 18px;
+  background-color: #d9ff64;
+  transform: rotate(-2deg);
+  border-radius: 5px;
+  z-index: -1;
+}
+
+/* Gen Z Neo-Pop Shadows */
+.pop-shadow {
+  box-shadow: 3px 3px 0px #17172b;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pop-shadow:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px #17172b;
+}
+
+.pop-shadow:active {
+  transform: translate(1px, 1px);
+  box-shadow: 2px 2px 0px #17172b;
+}
+
+.pop-shadow-sm {
+  box-shadow: 2px 2px 0px #17172b;
+}
+
+.sticker-badge {
+  border: 1.5px solid #17172b;
+  box-shadow: 2px 2px 0px #17172b;
+  font-family: var(--font-heading);
+}
+
+/* Endless Marquee Ticker */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f8f7ff;
+}
+::-webkit-scrollbar-thumb {
+  background: #d4d0ee;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7456ff;
+}
+
+/* Hide scrollbar utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

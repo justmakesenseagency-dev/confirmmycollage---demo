@@ -1,0 +1,8 @@
+{
+  "name": "ConfirmMyCollege - Common Application Platform for Indian MBA/PGDM Admissions",
+  "description": "Explore, compare up to 5 top B-schools, and apply with ONE common form and fee. Features AI college recommender, SOP reviewer, mock tests, and question corner.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
